@@ -14,6 +14,16 @@ export default {
     Navbar,
     Footer,
   },
+  provide() {
+    return {
+      cart: this.cart,
+    };
+  },
+  data() {
+    return {
+      cart: [],
+    };
+  },
 };
 </script>
 <style>

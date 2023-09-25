@@ -32,7 +32,7 @@
       <article class="flex flex-wrap justify-center p-10 gap-20 text-black">
         <div
           v-for="product in products"
-          :key="product.title"
+          :key="product.name"
           class="card w-full md:w-64 bg-base-100 flex-1 bg-white hover:scale-105 transition duration-300 ease-in-out"
         >
           <router-link class="mx-2" to="/shop">
@@ -44,7 +44,7 @@
               />
             </figure>
             <div class="card-body items-center text-center text-black">
-              <h2 class="card-title">{{ product.title }}</h2>
+              <h2 class="card-title">{{ product.name }}</h2>
 
               <div class="card-actions">
                 <button class="btn bg-inherit border-none">Buy Now</button>
@@ -64,13 +64,16 @@
           </p>
           <p class="text-xl leading-relaxed">
             Our bags undergo sterilisation in our advanced industrial steriliser
-            and are immediately sealed using an impulse sealer, guaranteeing
+            and are immediately sealed, guaranteeing
             <strong>no contamination</strong>.
           </p>
           <p class="text-xl leading-relaxed">
             We also offer a range of different substrates to suit your needs.
             Including supplemented substrate to
             <strong>enhance mushroom growth/yields</strong>.
+          </p>
+          <p class="text-xl leading-relaxed">
+            The bags we use are <strong>food safe and durable</strong>
           </p>
         </div>
         <aside class="col-start-4 col-span-2">
@@ -97,18 +100,24 @@ export default {
     return {
       products: [
         {
-          title: "Hardwood Sawdust",
-          imageUrl:
+          id: 1,
+          name: "Hardwood Sawdust",
+          price: 20,
+          image:
             "https://static.wixstatic.com/media/3b36c5_88eb1b85e64848c1aa0986eb87f4626f~mv2.jpeg/v1/fill/w_500,h_333,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3b36c5_88eb1b85e64848c1aa0986eb87f4626f~mv2.jpeg",
         },
         {
-          title: "Master's Mix",
-          imageUrl:
+          id: 2,
+          name: "Master's Mix",
+          price: 20,
+          image:
             "https://static.wixstatic.com/media/3b36c5_88eb1b85e64848c1aa0986eb87f4626f~mv2.jpeg/v1/fill/w_500,h_333,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3b36c5_88eb1b85e64848c1aa0986eb87f4626f~mv2.jpeg",
         },
         {
-          title: "Hardwood + Wheat Bran",
-          imageUrl:
+          id: 3,
+          name: "Hardwood + Wheat Bran",
+          price: 20,
+          image:
             "https://static.wixstatic.com/media/3b36c5_88eb1b85e64848c1aa0986eb87f4626f~mv2.jpeg/v1/fill/w_500,h_333,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3b36c5_88eb1b85e64848c1aa0986eb87f4626f~mv2.jpeg",
         },
       ],

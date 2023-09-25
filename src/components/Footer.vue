@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <h1>This is an about page</h1>
-  </div>
+  <div class="h-44 bg-custom-linen">Footer Section</div>
 </template>
 
 <script>
 export default {
-  name: "AboutView",
+  name: "Footer",
 };
 </script>
 
